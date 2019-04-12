@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Injun's Webportfolio</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		
+	</script>
+	<script type="text/javascript" src="inmoncarocel.js"></script>
+	<script type="text/javascript"></script>
+	<style type="text/css">
+		@import url('inmoncarocel.css');
+		.header > span{
+			border-left: 2px solid #EDA900;
+			padding:0 10px;
+		}
+	</style>
+</head>
+<body onload="initialize()">
+<button id="topBtn">
+	<i class="fas fa-arrow-up"></i>
+</button>
+
+	<div style="width: 1300px; height: 800px; margin: 0 auto;">
+		<div style="position: relative; margin: 100px 200px;">
+			<span style="font-size: 4em; position: absolute; color: darkgray;">Choi InJun</span>
+			<div class="header" style="position: absolute; right: 0px;top: 50px">
+				<span>Java</span>
+				<span>DB</span>
+				<span>HTML</span>
+				<span>Servlet</span>
+				<span>Spring</span>
+			</div>
+		</div>
+		<div style="position:relative; top: 250px; display: block; text-align: center;">
+			<img src="img/computer.png">
+		</div>
+	</div>
+
+	<!-- 캐러셀 시작 inmon_carosel로 시작-->
+	<div class="inmon_carosel">	
+		<!-- 오른쪽 슬라이드 : rightslide 왼쪽 슬라이드 : leftslide 자동 슬라이드x 는 그냥 지우면됨-->
+		<div style="font-size: 4em; color: darkgray">About Me</div>
+		<!-- 네이게이션 carosel_nav로 클래스 지정하고 
+			위치는 margin으로 조절 
+			ul에 width와 height를 주면 로 각각 셀에 적용 가능하니 li에 크기 지정하지 말것-->
+		<ul class="carosel_nav" style="margin-left: 110px; width: 200px">
+			<li class="carosel_nav_menu">WHO?</li>
+			<li class="carosel_nav_menu">EDUCATION</li>
+			<li class="carosel_nav_menu">LICENCE</li>
+			<li class="carosel_nav_menu">CAREER</li>
+			<!-- 네비게이션 메뉴 메뉴를 추가할땐 반드시 carosel_nav_menu 클래스를 지정할 것 -->
+			<div id="carosel_nav_bar"></div>
+			<!-- 움직이는 네비게이션 바 크기는 ul에 준 style을 따라가니 임의 조정x -->
+		</ul>
+		<!-- 본문 -->
+		<!-- carosel_content에 width와 height를 지정하면 
+			자식 카드도 크기가 맞춰지니 자식카드에 크기 조정 삼가할것 -->
+		<div class='carosel_content' style="width: 800px">
+			<button class="carosel_leftbutton"><i class="fas fa-chevron-left"></i></button>
+			<button class="carosel_rightbutton"><i class="fas fa-chevron-right"></i></button>
+			<!-- 왼쪽 오른쪽 버튼. 높이는 절대위치 이므로 재량껏 조절할 것 -->
+
+			<!-- 본문 보이는 곳 -->
+			<div class="carosel_view">
+				<!-- 슬라이드 애니메이션 받을 곳 -->
+				<div class="carocel_slide">
+					<div class="carosel_slide_card">
+						<img src="img/download.jpg" style="position: relative;width:200px;height: 265px; border-radius: 5px; left: 50px; top: 80px">
+
+						<span style="position: relative; left: 120px; top: 70px; font-size: 2em">CHOI IN JUN</span>
+
+					</div>
+					<div class="carosel_slide_card">2</div>
+					<div class="carosel_slide_card">3</div>
+					<div class="carosel_slide_card">4</div>
+					<!-- 슬라이드 카드 추가하는 부분. 
+					되도록 carosel_content에 지정한 크기 넘지 않게 만들것 
+					위에 네비게이션 메뉴와 카드 갯수와 순서가 맞는편이 보기 좋음-->
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
