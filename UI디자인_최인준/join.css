@@ -1,0 +1,443 @@
+*{margin:0;padding: 0}
+body{
+	background-color: #EAEAEA;
+	font-family: 'Nanum Gothic Coding', monospace;
+}
+header{
+	position: relative;
+	opacity: 0;
+	top: -35px;
+	width: 100%; 
+	height: 35px;
+	background-color:#8C8C8C;
+	animation-name: intro_header;
+	animation-fill-mode: both;
+	animation-duration: 0.5s;
+}
+button{
+	background: none;
+	border: none;
+	outline: none;
+}
+
+section{
+	position: relative;
+	width:576px;
+	height: 500px; 
+	background-color: #F6F6F6;
+	margin: 230px auto 0 auto; 
+	border-radius: 10px; 
+	border: 2px dashed #C2C2C2;
+	opacity: 0;
+	animation-name: intro_section;
+	animation-fill-mode: both;
+	animation-duration: 0.5s;
+	animation-delay: 0.3s;
+	overflow: hidden;
+}
+
+input{
+	border: none;
+}
+
+select{
+	border: none;
+}
+
+#step{
+	position: absolute; 
+	top: 15px; 
+	right: 20px; 
+	display: flex; 
+	line-height: 60px;
+}
+
+.step_circle{
+	width: 20px; 
+	height: 20px; 
+	border-radius: 10px; 
+	background-color: white; 
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+}
+
+.step_line{
+	display: flex; 
+	align-items: center;
+}
+
+.step_line > div{
+	width: 50px; 
+	border: 2px dashed white;
+}
+
+.step_dot{
+	width: 10px; 
+	height: 10px; 
+	border-radius: 10px; 
+	background-color: #5D5D5D;
+	transition: 0.5s;
+	opacity: 0;
+}
+
+#slide{
+	position: relative; 
+	display: flex; 
+	width: 1728px;
+}
+
+#join_name{
+	position: absolute; 
+	top: 80px; 
+	left: 100px; 
+	color: #5D5D5D;
+}
+
+#join_phone{
+	position: absolute; 
+	top: 195px; 
+	left: 100px; 
+	color: #5D5D5D;
+}
+
+#join_Mail{
+	margin-top: 260px;
+	margin-left: 100px;
+	font-size: 0.8em; 
+	color: #6799FF;
+}
+
+.messageBox{
+	position: relative;
+	user-select: none;
+	transition: 0.5s;
+	opacity: 0;
+}
+.messageBox:before{
+	content: '';
+	position: absolute; 
+	width: 10px; 
+	height: 10px; 
+	transform: rotate(45deg); 
+	top: -5.2px; 
+	left: 15px; 
+	background-color: white; 
+	z-index: 1;  
+	border-top: 1px solid rgba(189,189,189,0.8); 
+	border-left: 1px solid rgba(189,189,189,0.8);
+	border-radius: 1px;
+}
+
+.messageBox > div{
+	position: absolute; 
+	width: 190px; 
+	height: 20px; 
+	border:1px solid rgba(189,189,189,0.8); 
+	border-radius: 10px; 
+	background-color: white;
+}
+
+.messageBox > div > div{
+	position: absolute; 
+	z-index: 2; 
+	font-size: 10px;
+	line-height: 20px; 
+	margin-left: 10px;
+	color: tomato;
+}
+
+#pwMsg{
+	top: 243px; 
+	left: 100px;
+}
+#pwreMsg{
+	top: 343px; 
+	left: 100px;
+}
+
+#section_head{
+	width: inherit; 
+	height: 50px; 
+	background-color: #5D5D5D;
+}
+
+#section_head > p{
+	color: white; 
+	line-height: 55px; 
+	margin-left: 50px; 
+	font-size: 20px;
+}
+
+.join_page{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 576px;
+	height: 450px;
+	transition: 0.5s;
+}
+
+#join_page01:hover #box{
+	animation-name: box_move;
+	animation-duration: 0.5s;
+	animation-fill-mode: both;
+}
+
+#input_tag{
+	position: absolute; 
+	width: 400px; 
+	height: 35px; 
+	border-radius: 5px; 
+	margin: 5px auto 0 -5px;
+	overflow: hidden;
+}
+
+#input_tag > div:nth-child(1){
+	position: absolute; 
+	width: 390px; 
+	height: 27px; 
+	border-radius: 5px; 
+	border: 1px solid rgba(189,189,189,0.5); 
+	margin-top: 3px; 
+	margin-left: 4px;
+	z-index: 2; 
+	background-color: white;
+}
+
+.box{
+	position: absolute; 
+	width: 400px; 
+	height: 400px; 
+	z-index: 1; 
+	background-color: #4374D9; 
+	opacity: 0.5; 
+	transform: rotate(45deg); 
+	top: -220px; 
+	left: -460px;
+	transition: 0.5s;
+}
+
+#input_tag input{
+	margin-left: 20px; 
+	height: 27px;
+	width: 350px; 
+	border: none;
+	outline: none;
+}
+
+#toggleMail{
+	cursor: pointer;
+	user-select: none;
+}
+#toggleMail:hover{
+	text-decoration: underline;
+}
+
+#join_id{
+	position: absolute; 
+	top: 80px; 
+	left: 100px; 
+	color: #5D5D5D;
+}
+
+#join_pw{
+	position: absolute; 
+	top: 180px; 
+	left: 100px; 
+	color: #5D5D5D;
+}
+
+#pwretag{
+	position: absolute; 
+	top: 280px; 
+	left: 100px; 
+	color: #5D5D5D;
+}
+
+.nextbtn{
+	position: absolute; 
+	bottom: 20px; 
+	right: 20px; 
+	font-size: 40px; 
+	color: #5D5D5D;
+	transition: 1s;
+	cursor: pointer;
+	display: none;
+}
+
+#birth{
+	position: absolute; 
+	top: 80px; 
+	left: 130px; 
+	color: #5D5D5D;
+}
+
+#birth > div{
+	height: 35px; 
+	display: flex; 
+	align-items: center;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+#birth_yy{
+	width: 80px; 
+	height: 30px; 
+	line-height: 30px;
+}
+
+#birth_yy > input{
+	width: 80px; 
+	height: 25px;
+	border: 1px solid rgba(189,189,189,0.5); 
+}
+
+#birth_mm{
+	width: 80px; 
+	height: 30px; 
+	display: flex; 
+	align-items: center;
+	margin-left: 29px;
+}
+
+#birth_mm > select{
+	width: 80px;
+	height: 25px;
+	border: 1px solid rgba(189,189,189,0.5); 
+}
+
+#birth_dd{
+	width: 80px; 
+	height: 30px; 
+	line-height: 30px;
+	margin-left: 29px;
+}
+
+#birth_dd > input{
+	width: 80px; 
+	height: 25px;
+	border: 1px solid rgba(189,189,189,0.5); 
+}
+
+#address{
+	position: absolute; 
+	top: 180px; 
+	left: 130px; 
+	color: #5D5D5D;
+}
+
+#address > div{
+	position: relative; 
+	width: 400px; 
+	height: 100px;
+	margin-left: 10px;
+}
+
+.address_num{
+	margin-top: 10px;
+	width: 40px; 
+	height: 25px; 
+	padding: 4px 20px 4px 20px;
+	border: 1px solid rgba(189,189,189,0.5); 
+}
+
+#address button{
+	margin-top: 10px;
+	position: absolute; 
+	background-color: lightgray;
+	border-radius: 2px; 
+	padding : 8.5px; 
+	top: -1px;
+	left: 200px;
+	border: 1px solid rgba(189,189,189,0.5);
+}
+
+.address_detail{
+	display: block; 
+	width:292px; 
+	height: 25px; 
+	padding: 10px; 
+	margin-top: 5px;
+	border: 1px solid rgba(189,189,189,0.5);
+}
+
+#info_modal{
+	position: absolute; 
+	background-color: rgba(189,189,189,0.8); 
+	width: 100%; 
+	height: 450px; 
+	z-index: 100; 
+	top:50px;
+	border-radius: 5px; 
+	display: flex; 
+	align-items: center; 
+	justify-content: center;
+	transition: 0.5s;
+	opacity: 0;
+	z-index: -50;
+}
+
+#info_modal > div{
+	width: 50%; 
+	height: 50%; 
+	background-color: white; 
+	border-radius: 10px; 
+	overflow: hidden;
+}
+
+#info_modal > div > div:nth-child(1){
+	width: 100%; 
+	height: 20%; 
+	border-bottom: 1px dashed #C2C2C2; 
+	display: flex; 
+	align-items: center; 
+	font-size: 1.2em; 
+	background-color: #5D5D5D; 
+	color: white;
+}
+
+#info_modal > div > div:nth-child(1) > i{
+	margin: 0 5px 0 20px;
+}
+
+#info_modal > div > div:nth-child(2){
+	font-size: 13px; 
+	padding: 15px;
+}
+
+#info_modal > div > div:nth-child(3){
+	display: flex; 
+	justify-content: center;
+}
+
+#info_modal > div > div:nth-child(3) > button{
+	background-color: #5D5D5D; 
+	padding: 5px 10px 5px 10px; 
+	border-radius: 5px; 
+	color: white;
+	margin-top: 15px;
+}
+
+.submit_btn{
+	position: absolute; 
+	bottom: 30px; 
+	right:50px; 
+	background-color: #5D5D5D;
+	padding: 8px; 
+	color: white; 
+	border-radius: 2px;
+}
+
+@keyframes intro_header{
+	100%{
+		top: 0;
+		opacity: 1;
+	}
+}
+@keyframes intro_section{
+	100%{
+		margin: 200px auto 0 auto;
+		opacity: 1;
+	}
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Injun's Webportfolio</title>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARldhuHbmyPfj1bohLyjyI8VZ4KbvuTPw&callback=initMap"
+	type="text/javascript"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript">	</script>
+	<script type="text/javascript" src="inmoncarocel.js"></script>
+	<script type="text/javascript" src="gmap.js"></script>
+	<style type="text/css">
+		@import url('inmoncarocel.css');
+		@import url('index.css');
+		.header > span{
+			border-left: 2px solid #EDA900;
+			padding:0 10px;
+		}
+	</style>
+</head>
+<body onload="initialize()"  data-spy="scroll" data-target=".navbar" data-offset="50">
+	<div id="home" class="container-fluid">
+		<div>
+			<span>Choi InJun</span>
+			<div class="header">
+				<span>Java</span>
+				<span>DB</span>
+				<span>HTML</span>
+				<span>Servlet</span>
+				<span>Spring</span>
+				<span>Developer</span>
+			</div>
+		</div>
+		<div id="img_div">
+			<img src="img/computer.png">
+		</div>
+	</div>
+
+	<div id="navbar_id" class="bg-dark">
+		<nav class="navbar navbar-expand-sm navbar-dark" style="width: 40%; left: 20%; display: inline-block;"> 
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="#home">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#aboutme">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#skills">Skill</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#contact">Contact</a>
+				</li>
+			</ul>
+			
+		</nav>
+	</div>
+	<!-- 캐러셀 시작 inmon_carosel로 시작-->
+	<div id="aboutme" class="inmon_carosel rightslide container-fluid">	
+		<!-- 오른쪽 슬라이드 : rightslide 왼쪽 슬라이드 : leftslide 자동 슬라이드x 는 그냥 지우면됨-->
+		<div>About Me</div>
+		<!-- 네이게이션 carosel_nav로 클래스 지정하고 
+			위치는 margin으로 조절 
+			ul에 width와 height를 주면 로 각각 셀에 적용 가능하니 li에 크기 지정하지 말것-->
+			<ul class="carosel_nav">
+				<li class="carosel_nav_menu">WHO?</li>
+				<li class="carosel_nav_menu">EDUCATION</li>
+				<li class="carosel_nav_menu">LICENCE</li>
+				<li class="carosel_nav_menu">CAREER</li>
+				<!-- 네비게이션 메뉴 메뉴를 추가할땐 반드시 carosel_nav_menu 클래스를 지정할 것 -->
+				<div id="carosel_nav_bar"></div>
+				<!-- 움직이는 네비게이션 바 크기는 ul에 준 style을 따라가니 임의 조정x -->
+			</ul>
+			<!-- 본문 -->
+		<!-- carosel_content에 width와 height를 지정하면 
+			자식 카드도 크기가 맞춰지니 자식카드에 크기 조정 삼가할것 -->
+			<div class='carosel_content' style="width: 800px">
+				<button class="carosel_leftbutton"><i class="fas fa-chevron-left"></i></button>
+				<button class="carosel_rightbutton"><i class="fas fa-chevron-right"></i></button>
+				<!-- 왼쪽 오른쪽 버튼. 높이는 절대위치 이므로 재량껏 조절할 것 -->
+
+				<!-- 본문 보이는 곳 -->
+				<div class="carosel_view">
+					<!-- 슬라이드 애니메이션 받을 곳 -->
+					<div class="carocel_slide">
+						<div id="card01" class="carosel_slide_card">
+							<img src="img/download.jpg">
+							<span><i class="fas fa-user"></i> CHOI IN JUN<br></span>
+							<span><i class="fas fa-birthday-cake"></i> 1990.03.14</span>
+							<span><i class="fas fa-mobile-alt"></i>&nbsp;010-8614-0000</span>
+							<span><i class="fas fa-map-marker-alt"></i> 19-3, Hongmun-gil, Hwasun-eup</span>
+							<span>Hwasun-gun, Jeollanam-do, Korea</span>
+						</div>
+						<div id="card02" class="carosel_slide_card">
+							<table>
+								<tr><th><i class="fas fa-school"></i></th></tr>
+								<tr><td>화순고등학교 졸업<br>(06.03 ~ 09.02)</td></tr>
+								<tr><td>조선대학교 컴퓨터공학과 학사졸업<br>(09.03 ~ 17.02)</td></tr>
+								<tr><td>한국경영원 인재개발원 국비지원 교육과정 수료<br>(19.01 ~ 19.07)</td></tr>
+							</table>						
+						</div>
+						<div id="card03" class="carosel_slide_card">
+							<table>
+								<tr><th><i class="fas fa-id-badge"></i></th></tr>
+								<tr><td>정보처리기사<br>한국산업인력공단</td></tr>
+								<tr><td>정보보안관제사2급<br>?</td></tr>
+							</table>
+						</div>
+						<div id="card04" class="carosel_slide_card">
+							<table>
+								<tr><th><i class="fas fa-building"></i></th></tr>
+								<tr><td>다이소 매장관리<br>(12.10 ~ 13.02)</td></tr>
+								<tr><td>조선대학교 중앙도서관 근로장학생<br>(16.03 ~ 17.02)</td></tr>
+								<tr><td>광주시청 보안관제<br>(17.07 ~ 18.02)</td></tr>
+							</table>
+						</div>
+					<!-- 슬라이드 카드 추가하는 부분. 
+					되도록 carosel_content에 지정한 크기 넘지 않게 만들것 
+					위에 네비게이션 메뉴와 카드 갯수와 순서가 맞는편이 보기 좋음-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="playbtn" style="text-align: center; cursor: pointer;">
+			<i class="fas fa-play" style="position: absolute;"></i>
+
+			<i class="fas fa-pause" style="position: absolute; display: none;"></i>
+	</div>
+	<div id="skills" class="container-fluid">
+		<div>Technical Skills</div>
+		<div>
+			<div>Java</div>
+			<div class="progress" style="height: 40px">
+				<div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 70%; height: 40px">70%</div>
+			</div>
+			<div>HTML, CSS</div>
+			<div class="progress" style="height: 40px">
+				<div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width: 40%; height: 40px">40%
+
+				</div>
+			</div>
+			<div>JavaScript, jQuery</div>
+			<div class="progress" style="height: 40px">
+				<div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 60%; height: 40px">60%</div>
+			</div>
+			<div>Servlet,Spring</div>
+			<div class="progress" style="height: 40px">
+				<div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width: 10%; height: 40px">10%</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="contact">Contact</div>
+	<div class="contact_wrap">
+		<div class="inner_contact">
+			<div class="map" id="map_view" style="width: 640px; height: 480px;"></div>
+			<div class="contact">
+				<p>Do you want my programming skills? fill out the from and fill me in with the details :)I love meeting new people!</p>
+				<div class="coninfo">
+					<label>Name</label>
+					<input type="text" name="">
+				</div>
+				<div class="coninfo">
+					<label>Email</label>
+					<input type="text" name="">
+				</div>
+				<div class="coninfo">
+					<label>Message</label>
+					<input type="text" name="">
+				</div>
+				<button class="bg-dark"><i class="fas fa-rocket"></i> Send</button>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(window).scroll(function(event) {
+				if($(document).scrollTop()>=900){
+					$('#navbar_id').addClass('fixed-top');
+				}else if($(document).scrollTop()<900){
+					$('#navbar_id').removeClass('fixed-top');
+				}
+			});
+			
+		});
+	</script>
+</body>
+</html>

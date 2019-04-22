@@ -1,0 +1,73 @@
+button:focus{
+	outline: none;
+}
+.inmon_carosel{
+	width: 1300px; 
+	height: 800px;
+	margin: 0 auto; 
+	text-align: center; 
+	padding: 100px;
+	border-collapse: collapse;
+}
+.carosel_nav{
+	position: relative;
+	display: block;
+	width: 200px;
+	height: 28px;
+}
+.carosel_nav > li{
+	list-style: none;
+	float: left;
+	height: inherit;
+	border-collapse: collapse;
+	cursor: pointer;
+}
+#carosel_nav_bar{
+	position: absolute;
+	background: darkorange; 
+	z-index: -10;
+}
+.carosel_content{
+	position: relative; 
+	width: 840px; 
+	height: 480px; 
+	margin: 0 auto;
+}
+.carosel_view{
+	position: relative; 
+	overflow: hidden;
+}
+.carosel_leftbutton{
+	position:absolute; 
+	width: 80px; 
+	height: 120px; 
+	top: 180px; 
+	left: 0px; 
+	background: none; 
+	z-index: 100;
+	border: none;
+	outline: none;
+	
+}
+.carosel_rightbutton{
+	position:absolute; 
+	width: 80px; 
+	height: 120px; 
+	top: 180px; 
+	right: 0px; 
+	background: none; 
+	z-index: 100;
+	border: none;
+	outline: none;
+}
+.carocel_slide{
+	display:flex;
+	position: relative; 
+	height: 480px;
+	top: 0px;
+	left: 0px;
+}
+.carosel_slide_card{
+	position: relative;
+	display: flex;
+}
